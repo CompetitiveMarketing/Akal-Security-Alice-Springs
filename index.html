@@ -1,0 +1,2046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Akal Security | Alice Springs</title>
+
+<meta name="description" content="Professional security solutions for Alice Springs and Central Australia.">
+
+<style>
+
+:root{
+  --bg:#050908;
+  --bg2:#0a1210;
+  --panel:#0e1916;
+  --panel2:#13221e;
+  --text:#f4f7f5;
+  --muted:#9caeaa;
+  --line:rgba(255,255,255,.10);
+  --accent:#c7ff65;
+  --accent-dark:#91d63b;
+  --max:1200px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Inter,Arial,Helvetica,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button,
+input,
+textarea,
+select{
+  font-family:inherit;
+}
+
+.container{
+  width:min(var(--max),calc(100% - 40px));
+  margin:auto;
+}
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+h1,
+h2,
+h3{
+  line-height:1.03;
+  letter-spacing:-.045em;
+}
+
+h1{
+  font-size:clamp(3.5rem,8vw,7.2rem);
+}
+
+h2{
+  font-size:clamp(2.7rem,5vw,4.8rem);
+}
+
+h3{
+  font-size:1.35rem;
+}
+
+p{
+  color:var(--muted);
+}
+
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:var(--accent);
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  font-size:.72rem;
+  font-weight:900;
+}
+
+.eyebrow::before{
+  content:"";
+  width:30px;
+  height:1px;
+  background:var(--accent);
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:54px;
+  padding:0 24px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  font-weight:900;
+  transition:.25s ease;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+}
+
+.btn-primary{
+  background:var(--accent);
+  color:#07100b;
+  border-color:var(--accent);
+}
+
+.btn-primary:hover{
+  background:#d4ff8c;
+}
+
+.btn-outline:hover{
+  background:rgba(255,255,255,.06);
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header{
+  position:fixed;
+  z-index:100;
+  left:0;
+  right:0;
+  top:0;
+  background:rgba(5,9,8,.76);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+
+.nav{
+  height:84px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:950;
+}
+
+.logo-mark{
+  width:44px;
+  height:44px;
+  border-radius:13px;
+  display:grid;
+  place-items:center;
+  color:var(--accent);
+  font-size:21px;
+  font-weight:950;
+  border:1px solid rgba(199,255,101,.45);
+  background:rgba(199,255,101,.07);
+}
+
+.logo-text{
+  font-size:1rem;
+  letter-spacing:.01em;
+}
+
+.logo-text small{
+  display:block;
+  color:#778782;
+  font-size:.61rem;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  margin-top:2px;
+}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:32px;
+  color:#c8d0cd;
+  font-size:.88rem;
+  font-weight:800;
+}
+
+.nav-links a{
+  transition:.2s;
+}
+
+.nav-links a:hover{
+  color:var(--accent);
+}
+
+.nav-actions{
+  display:flex;
+  gap:10px;
+}
+
+.mobile-menu{
+  display:none;
+  border:0;
+  background:none;
+  color:white;
+  font-size:27px;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  min-height:950px;
+  padding:160px 0 100px;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+
+  background:
+    radial-gradient(
+      circle at 78% 22%,
+      rgba(126,210,171,.17),
+      transparent 29%
+    ),
+    radial-gradient(
+      circle at 8% 78%,
+      rgba(199,255,101,.08),
+      transparent 27%
+    ),
+    linear-gradient(
+      135deg,
+      #050908 0%,
+      #091310 55%,
+      #0d1e19 100%
+    );
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  opacity:.30;
+
+  background:
+    linear-gradient(
+      rgba(255,255,255,.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.025) 1px,
+      transparent 1px
+    );
+
+  background-size:70px 70px;
+
+  mask-image:linear-gradient(
+    to bottom,
+    black,
+    transparent 90%
+  );
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  width:700px;
+  height:700px;
+  border-radius:50%;
+  border:1px solid rgba(199,255,101,.04);
+  right:-300px;
+  top:100px;
+}
+
+.hero-grid{
+  position:relative;
+  z-index:2;
+
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  gap:80px;
+  align-items:center;
+}
+
+.hero-content p{
+  max-width:650px;
+  font-size:1.17rem;
+  margin:30px 0 34px;
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.hero-stats{
+  display:flex;
+  gap:35px;
+  flex-wrap:wrap;
+  margin-top:42px;
+}
+
+.stat strong{
+  display:block;
+  font-size:1.12rem;
+}
+
+.stat span{
+  color:#74837f;
+  font-size:.75rem;
+}
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.hero-visual{
+  height:560px;
+  position:relative;
+  overflow:hidden;
+
+  border-radius:35px;
+  border:1px solid var(--line);
+
+  background:
+    radial-gradient(
+      circle at 50% 32%,
+      rgba(199,255,101,.17),
+      transparent 22%
+    ),
+    linear-gradient(
+      145deg,
+      #18312a,
+      #07100e
+    );
+
+  box-shadow:
+    0 40px 100px rgba(0,0,0,.45);
+}
+
+.hero-visual::before{
+  content:"";
+
+  position:absolute;
+  width:410px;
+  height:410px;
+
+  left:50%;
+  top:46%;
+
+  transform:translate(-50%,-50%);
+
+  border-radius:50%;
+
+  border:1px solid rgba(199,255,101,.16);
+
+  box-shadow:
+    0 0 0 70px rgba(199,255,101,.025),
+    0 0 0 140px rgba(199,255,101,.015);
+}
+
+.shield{
+  position:absolute;
+
+  width:180px;
+  height:210px;
+
+  left:50%;
+  top:44%;
+
+  transform:translate(-50%,-50%);
+
+  clip-path:polygon(
+    50% 0,
+    92% 14%,
+    86% 66%,
+    50% 100%,
+    14% 66%,
+    8% 14%
+  );
+
+  background:
+    linear-gradient(
+      145deg,
+      #e2ffad,
+      #78d6ae
+    );
+
+  display:grid;
+  place-items:center;
+
+  color:#07100b;
+
+  font-size:66px;
+  font-weight:950;
+
+  box-shadow:
+    0 0 80px rgba(199,255,101,.18);
+}
+
+.visual-label{
+  position:absolute;
+  left:24px;
+  right:24px;
+  bottom:24px;
+
+  padding:18px;
+
+  border:1px solid var(--line);
+  border-radius:18px;
+
+  background:rgba(4,10,8,.78);
+  backdrop-filter:blur(15px);
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+}
+
+.live{
+  display:flex;
+  align-items:center;
+  font-weight:800;
+  font-size:.88rem;
+}
+
+.live-dot{
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:var(--accent);
+  margin-right:9px;
+  box-shadow:0 0 18px var(--accent);
+}
+
+.visual-label span{
+  color:#84938f;
+  font-size:.75rem;
+}
+
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
+
+section{
+  padding:125px 0;
+}
+
+.dark-section{
+  background:#091310;
+}
+
+.section-heading{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:60px;
+
+  margin-bottom:55px;
+}
+
+.section-heading p{
+  max-width:490px;
+}
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.service-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+
+.service-card{
+  min-height:285px;
+  padding:30px;
+
+  border-radius:23px;
+  border:1px solid var(--line);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.045),
+      rgba(255,255,255,.01)
+    );
+
+  position:relative;
+  overflow:hidden;
+
+  transition:.3s ease;
+}
+
+.service-card:hover{
+  transform:translateY(-7px);
+
+  border-color:
+    rgba(199,255,101,.35);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(199,255,101,.08),
+      rgba(255,255,255,.015)
+    );
+}
+
+.service-number{
+  position:absolute;
+  right:20px;
+  top:18px;
+
+  color:rgba(255,255,255,.13);
+
+  font-size:.75rem;
+  font-weight:900;
+}
+
+.service-icon{
+  width:48px;
+  height:48px;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:14px;
+
+  color:var(--accent);
+
+  background:rgba(199,255,101,.09);
+
+  border:1px solid rgba(199,255,101,.12);
+
+  margin-bottom:48px;
+
+  font-weight:950;
+  font-size:1.2rem;
+}
+
+.service-card h3{
+  margin-bottom:10px;
+}
+
+.service-card p{
+  font-size:.88rem;
+}
+
+/* =========================================================
+   WHY AKAL
+========================================================= */
+
+.split{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:85px;
+  align-items:center;
+}
+
+.statement{
+  color:white;
+  font-size:clamp(1.8rem,3vw,2.75rem);
+  line-height:1.17;
+  letter-spacing:-.035em;
+  margin:25px 0;
+}
+
+.why-panel{
+  padding:45px;
+
+  border-radius:30px;
+
+  border:1px solid var(--line);
+
+  background:
+    linear-gradient(
+      145deg,
+      #142a25,
+      #0b1714
+    );
+}
+
+.feature-list{
+  margin-top:28px;
+}
+
+.feature{
+  display:flex;
+  gap:15px;
+
+  padding:18px 0;
+
+  border-bottom:1px solid var(--line);
+}
+
+.check{
+  width:29px;
+  height:29px;
+  flex:0 0 auto;
+
+  display:grid;
+  place-items:center;
+
+  border-radius:50%;
+
+  background:rgba(199,255,101,.1);
+
+  color:var(--accent);
+
+  font-weight:900;
+}
+
+.feature strong{
+  display:block;
+  margin-bottom:3px;
+}
+
+.feature p{
+  font-size:.85rem;
+}
+
+/* =========================================================
+   INDUSTRIES
+========================================================= */
+
+.industries{
+  background:
+    linear-gradient(
+      #091310,
+      #060c0a
+    );
+}
+
+.industry-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.industry-card{
+  min-height:165px;
+
+  padding:27px;
+
+  border-radius:21px;
+
+  border:1px solid var(--line);
+
+  display:flex;
+  align-items:flex-end;
+
+  position:relative;
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.045),
+      rgba(255,255,255,.01)
+    );
+}
+
+.industry-card::before{
+  content:"";
+
+  position:absolute;
+
+  width:150px;
+  height:150px;
+
+  right:-55px;
+  top:-55px;
+
+  border-radius:50%;
+
+  background:
+    rgba(199,255,101,.07);
+}
+
+.industry-card h3{
+  position:relative;
+  z-index:2;
+}
+
+/* =========================================================
+   LOCAL SECTION
+========================================================= */
+
+.local-section{
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(199,255,101,.08),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #10231e,
+      #060c0a
+    );
+}
+
+.local-copy{
+  max-width:900px;
+}
+
+.local-copy p{
+  max-width:700px;
+  margin:25px 0;
+  font-size:1.05rem;
+}
+
+.local-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin-top:38px;
+}
+
+.local-box{
+  padding:24px;
+
+  border:1px solid var(--line);
+  border-radius:19px;
+
+  background:rgba(255,255,255,.025);
+}
+
+.local-box strong{
+  display:block;
+  margin-bottom:5px;
+}
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta-section{
+  padding:100px 0;
+}
+
+.cta-box{
+  padding:75px;
+
+  border-radius:34px;
+
+  color:#07100b;
+
+  position:relative;
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #d5ff99,
+      #78d7ae
+    );
+}
+
+.cta-box::after{
+  content:"";
+
+  position:absolute;
+
+  width:500px;
+  height:500px;
+
+  right:-220px;
+  top:-270px;
+
+  border-radius:50%;
+
+  background:rgba(255,255,255,.17);
+}
+
+.cta-box h2{
+  max-width:800px;
+}
+
+.cta-box p{
+  color:#18382d;
+  max-width:670px;
+  margin:22px 0 30px;
+  font-size:1.05rem;
+}
+
+.cta-box .btn{
+  background:#07100b;
+  color:white;
+  border-color:#07100b;
+}
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-section{
+  background:#091310;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:75px;
+}
+
+.contact-copy p{
+  max-width:570px;
+  margin-top:23px;
+}
+
+.contact-details{
+  margin-top:35px;
+}
+
+.contact-item{
+  padding:18px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.contact-item span{
+  display:block;
+
+  color:#72827d;
+
+  text-transform:uppercase;
+  letter-spacing:.13em;
+
+  font-size:.69rem;
+}
+
+.contact-item strong,
+.contact-item a{
+  display:block;
+  font-size:1.12rem;
+  margin-top:2px;
+}
+
+.contact-form{
+  padding:43px;
+
+  border-radius:30px;
+
+  border:1px solid var(--line);
+
+  background:
+    linear-gradient(
+      145deg,
+      #142721,
+      #0b1512
+    );
+}
+
+form{
+  display:grid;
+  gap:14px;
+}
+
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+input,
+textarea,
+select{
+  width:100%;
+
+  padding:16px 17px;
+
+  border-radius:14px;
+
+  border:1px solid var(--line);
+
+  background:#0b1815;
+
+  color:white;
+
+  outline:none;
+
+  font-size:.95rem;
+}
+
+textarea{
+  min-height:150px;
+  resize:vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+  border-color:rgba(199,255,101,.55);
+
+  box-shadow:
+    0 0 0 3px rgba(199,255,101,.07);
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  padding:36px 0;
+
+  border-top:1px solid var(--line);
+
+  background:#050a08;
+
+  color:#70807b;
+
+  font-size:.8rem;
+}
+
+.footer-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.footer-inner strong{
+  color:white;
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(25px);
+
+  transition:
+    opacity .7s ease,
+    transform .7s ease;
+}
+
+.reveal.visible{
+  opacity:1;
+  transform:none;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:950px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .nav-actions .btn-outline{
+    display:none;
+  }
+
+  .mobile-menu{
+    display:block;
+  }
+
+  .hero{
+    min-height:auto;
+  }
+
+  .hero-grid,
+  .split,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero-visual{
+    height:470px;
+  }
+
+  .service-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .industry-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .local-grid{
+    grid-template-columns:1fr;
+  }
+
+  .section-heading{
+    display:block;
+  }
+
+  .section-heading p{
+    margin-top:20px;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .container{
+    width:calc(100% - 28px);
+  }
+
+  .nav{
+    height:74px;
+  }
+
+  .hero{
+    padding:125px 0 80px;
+  }
+
+  h1{
+    font-size:3.45rem;
+  }
+
+  section{
+    padding:85px 0;
+  }
+
+  .service-grid,
+  .industry-grid,
+  .form-row{
+    grid-template-columns:1fr;
+  }
+
+  .service-card{
+    min-height:230px;
+  }
+
+  .hero-stats{
+    gap:20px;
+  }
+
+  .hero-visual{
+    height:370px;
+  }
+
+  .why-panel{
+    padding:30px;
+  }
+
+  .cta-box{
+    padding:43px 27px;
+  }
+
+  .contact-form{
+    padding:28px;
+  }
+
+  .footer-inner{
+    display:block;
+  }
+
+  .footer-inner div+div{
+    margin-top:8px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+<div class="container nav">
+
+<a href="#top" class="logo">
+
+<span class="logo-mark">A</span>
+
+<span class="logo-text">
+Akal Security
+<small>Alice Springs · NT</small>
+</span>
+
+</a>
+
+<nav class="nav-links">
+
+<a href="#services">Services</a>
+
+<a href="#why">Why Akal</a>
+
+<a href="#industries">Industries</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+<div class="nav-actions">
+
+<a href="tel:0414036844" class="btn btn-outline">
+Call Now
+</a>
+
+<a href="#contact" class="btn btn-primary">
+Request a Quote
+</a>
+
+</div>
+
+<button class="mobile-menu">
+☰
+</button>
+
+</div>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<main id="top">
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+<div class="hero-content reveal">
+
+<span class="eyebrow">
+Professional Security · Alice Springs
+</span>
+
+<h1>
+Security without compromise.
+</h1>
+
+<p>
+Professional security solutions designed around your people,
+property, events and operational needs across Alice Springs
+and Central Australia.
+</p>
+
+<div class="hero-actions">
+
+<a href="#contact" class="btn btn-primary">
+Request a Quote →
+</a>
+
+<a href="tel:0414036844" class="btn btn-outline">
+Speak With Akal
+</a>
+
+</div>
+
+<div class="hero-stats">
+
+<div class="stat">
+<strong>24/7</strong>
+<span>Operating support</span>
+</div>
+
+<div class="stat">
+<strong>Professional</strong>
+<span>Security personnel</span>
+</div>
+
+<div class="stat">
+<strong>Local</strong>
+<span>Alice Springs presence</span>
+</div>
+
+</div>
+
+</div>
+
+
+<div class="hero-visual reveal">
+
+<div class="shield">
+A
+</div>
+
+<div class="visual-label">
+
+<div class="live">
+<span class="live-dot"></span>
+Protection in place
+</div>
+
+<span>
+Central Australia
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     SERVICES
+========================================================= -->
+
+<section id="services" class="dark-section">
+
+<div class="container">
+
+<div class="section-heading reveal">
+
+<div>
+
+<span class="eyebrow">
+What we do
+</span>
+
+<h2>
+Protection built around your needs.
+</h2>
+
+</div>
+
+<p>
+From day-to-day site security to major events,
+professional security solutions can be tailored
+around your environment and requirements.
+</p>
+
+</div>
+
+
+<div class="service-grid">
+
+<article class="service-card reveal">
+
+<span class="service-number">01</span>
+
+<div class="service-icon">
+◈
+</div>
+
+<h3>
+Security Officers
+</h3>
+
+<p>
+Professional uniformed security personnel for
+businesses, properties and operational environments.
+</p>
+
+</article>
+
+
+<article class="service-card reveal">
+
+<span class="service-number">02</span>
+
+<div class="service-icon">
+◎
+</div>
+
+<h3>
+Event Security
+</h3>
+
+<p>
+Security support for events and public-facing
+environments where safety, presence and
+professionalism matter.
+</p>
+
+</article>
+
+
+<article class="service-card reveal">
+
+<span class="service-number">03</span>
+
+<div class="service-icon">
+⌁
+</div>
+
+<h3>
+Mobile Patrols
+</h3>
+
+<p>
+Mobile security patrol solutions designed to provide
+a visible presence and responsive site coverage.
+</p>
+
+</article>
+
+
+<article class="service-card reveal">
+
+<span class="service-number">04</span>
+
+<div class="service-icon">
++
+</div>
+
+<h3>
+Private Security
+</h3>
+
+<p>
+Tailored security arrangements built around
+individual client requirements and circumstances.
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     WHY AKAL
+========================================================= -->
+
+<section id="why">
+
+<div class="container split">
+
+<div class="reveal">
+
+<span class="eyebrow">
+Why Akal
+</span>
+
+<p class="statement">
+A security partner should bring more than
+a uniform. It should bring confidence.
+</p>
+
+<p>
+Every environment has different risks, people
+and priorities. The right solution starts by
+understanding what needs protecting and how
+your operation actually works.
+</p>
+
+</div>
+
+
+<div class="why-panel reveal">
+
+<span class="eyebrow">
+A professional approach
+</span>
+
+<div class="feature-list">
+
+<div class="feature">
+
+<span class="check">
+✓
+</span>
+
+<div>
+
+<strong>
+Professional presence
+</strong>
+
+<p>
+Security personnel who represent your site
+with professionalism and respect.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="feature">
+
+<span class="check">
+✓
+</span>
+
+<div>
+
+<strong>
+Tailored solutions
+</strong>
+
+<p>
+Security arrangements shaped around the
+specific requirements of each client.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="feature">
+
+<span class="check">
+✓
+</span>
+
+<div>
+
+<strong>
+Responsive support
+  <p>
+Clear communication and responsive support to help
+keep your security arrangements running smoothly.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="feature">
+
+<span class="check">
+✓
+</span>
+
+<div>
+
+<strong>
+Central Australian focus
+</strong>
+
+<p>
+A security approach suited to the people, properties
+and operating environments of Central Australia.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     INDUSTRIES
+========================================================= -->
+
+<section id="industries" class="industries">
+
+<div class="container">
+
+<div class="section-heading reveal">
+
+<div>
+
+<span class="eyebrow">
+Where we work
+</span>
+
+<h2>
+Security for serious environments.
+</h2>
+
+</div>
+
+<p>
+Different environments require different approaches.
+Security solutions can be structured around your
+site, people, operating hours and specific requirements.
+</p>
+
+</div>
+
+
+<div class="industry-grid">
+
+<article class="industry-card reveal">
+
+<h3>
+Commercial Sites
+</h3>
+
+</article>
+
+
+<article class="industry-card reveal">
+
+<h3>
+Events & Venues
+</h3>
+
+</article>
+
+
+<article class="industry-card reveal">
+
+<h3>
+Retail & Public Areas
+</h3>
+
+</article>
+
+
+<article class="industry-card reveal">
+
+<h3>
+Construction & Property
+</h3>
+
+</article>
+
+
+<article class="industry-card reveal">
+
+<h3>
+Private Clients
+</h3>
+
+</article>
+
+
+<article class="industry-card reveal">
+
+<h3>
+Remote & Regional Operations
+</h3>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     LOCAL CENTRAL AUSTRALIA
+========================================================= -->
+
+<section class="local-section">
+
+<div class="container">
+
+<div class="local-copy reveal">
+
+<span class="eyebrow">
+Alice Springs · Central Australia
+</span>
+
+<h2>
+Local presence.
+<br>
+Serious protection.
+</h2>
+
+<p>
+Security is about more than simply being there.
+It's about having the right people, the right
+approach and clear communication when it matters.
+</p>
+
+</div>
+
+
+<div class="local-grid">
+
+<div class="local-box reveal">
+
+<strong>
+Professional
+</strong>
+
+<p>
+A professional approach designed to give clients
+confidence in their security arrangements.
+</p>
+
+</div>
+
+
+<div class="local-box reveal">
+
+<strong>
+Personalised
+</strong>
+
+<p>
+Security solutions can be tailored around your
+property, people and operational requirements.
+</p>
+
+</div>
+
+
+<div class="local-box reveal">
+
+<strong>
+Responsive
+</strong>
+
+<p>
+Clear communication and practical support from
+initial enquiry through to ongoing service.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     CTA
+========================================================= -->
+
+<section class="cta-section">
+
+<div class="container">
+
+<div class="cta-box reveal">
+
+<h2>
+Let's build the right security solution for your site.
+</h2>
+
+<p>
+Tell us what you need protected, where you're located
+and what you're looking for. We'll help determine the
+right approach for your requirements.
+</p>
+
+<a href="#contact" class="btn">
+Request a Quote →
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section id="contact" class="contact-section">
+
+<div class="container contact-grid">
+
+<div class="contact-copy reveal">
+
+<span class="eyebrow">
+Get in touch
+</span>
+
+<h2>
+Let's talk security.
+</h2>
+
+<p>
+Whether you're looking for ongoing site security,
+event support, patrols or a tailored security solution,
+get in touch to discuss your requirements.
+</p>
+
+
+<div class="contact-details">
+
+<div class="contact-item">
+
+<span>
+Phone
+</span>
+
+<a href="tel:0414036844">
+0414 036 844
+</a>
+
+</div>
+
+
+<div class="contact-item">
+
+<span>
+Location
+</span>
+
+<strong>
+Alice Springs, NT
+</strong>
+
+</div>
+
+
+<div class="contact-item">
+
+<span>
+Availability
+</span>
+
+<strong>
+24/7 operating support
+</strong>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="contact-form reveal">
+
+<form id="quoteForm">
+
+<div class="form-row">
+
+<input
+type="text"
+name="name"
+placeholder="Your name"
+required
+>
+
+<input
+type="tel"
+name="phone"
+placeholder="Phone number"
+required
+>
+
+</div>
+
+
+<div class="form-row">
+
+<input
+type="email"
+name="email"
+placeholder="Email address"
+required
+>
+
+<select
+name="service"
+required
+>
+
+<option value="">
+What do you need?
+</option>
+
+<option>
+Security Officers
+</option>
+
+<option>
+Event Security
+</option>
+
+<option>
+Mobile Patrols
+</option>
+
+<option>
+Private Security
+</option>
+
+<option>
+Commercial Security
+</option>
+
+<option>
+Other / Not sure
+</option>
+
+</select>
+
+</div>
+
+
+<textarea
+name="message"
+placeholder="Tell us a little about your security requirements..."
+required
+></textarea>
+
+
+<button
+type="submit"
+class="btn btn-primary"
+>
+Request a Quote →
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+<div class="container footer-inner">
+
+<div>
+<strong>
+AKAL SECURITY
+</strong>
+&nbsp; · &nbsp;
+Alice Springs, NT
+</div>
+
+<div>
+Professional security solutions · Central Australia
+</div>
+
+</div>
+
+</footer>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+const revealElements =
+document.querySelectorAll(".reveal");
+
+const observer =
+new IntersectionObserver(
+(entries) => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("visible");
+
+observer.unobserve(entry.target);
+
+}
+
+});
+
+},
+{
+threshold:0.12
+}
+);
+
+
+revealElements.forEach(element => {
+
+observer.observe(element);
+
+});
+
+
+/* =========================================================
+   DEMO FORM
+========================================================= */
+
+const quoteForm =
+document.getElementById("quoteForm");
+
+
+quoteForm.addEventListener(
+"submit",
+function(event){
+
+event.preventDefault();
+
+alert(
+"Thanks for your enquiry. This demo form will be connected to Akal Security's real enquiry system before launch."
+);
+
+quoteForm.reset();
+
+}
+);
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+const mobileMenu =
+document.querySelector(".mobile-menu");
+
+const navLinks =
+document.querySelector(".nav-links");
+
+
+mobileMenu.addEventListener(
+"click",
+function(){
+
+if(navLinks.style.display === "flex"){
+
+navLinks.style.display = "none";
+
+}else{
+
+navLinks.style.display = "flex";
+
+navLinks.style.position = "absolute";
+navLinks.style.top = "74px";
+navLinks.style.left = "0";
+navLinks.style.right = "0";
+
+navLinks.style.padding = "22px 20px";
+
+navLinks.style.flexDirection = "column";
+navLinks.style.alignItems = "flex-start";
+
+navLinks.style.gap = "18px";
+
+navLinks.style.background =
+"rgba(5,9,8,.97)";
+
+navLinks.style.borderBottom =
+"1px solid rgba(255,255,255,.08)";
+
+}
+
+}
+);
+
+
+/* =========================================================
+   CLOSE MOBILE MENU AFTER CLICK
+========================================================= */
+
+navLinks
+.querySelectorAll("a")
+.forEach(link => {
+
+link.addEventListener(
+"click",
+function(){
+
+if(window.innerWidth <= 950){
+
+navLinks.style.display = "none";
+
+}
+
+}
+);
+
+
+/* =========================================================
+   RESET MOBILE NAV ON RESIZE
+========================================================= */
+
+window.addEventListener(
+"resize",
+function(){
+
+if(window.innerWidth > 950){
+
+navLinks.style.display = "";
+
+navLinks.style.position = "";
+
+navLinks.style.top = "";
+
+navLinks.style.left = "";
+
+navLinks.style.right = "";
+
+navLinks.style.padding = "";
+
+navLinks.style.flexDirection = "";
+
+navLinks.style.alignItems = "";
+
+navLinks.style.gap = "";
+
+navLinks.style.background = "";
+
+navLinks.style.borderBottom = "";
+
+}
+
+}
+);
+
+</script>
+
+</body>
+</html>
